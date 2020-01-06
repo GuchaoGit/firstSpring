@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a02654a2-f1d3-4c0f-829e-44f769b78da4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guc/fristspring/bean/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/CsvOutputGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/IOutputGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/JsonOutputGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/OutputHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/guc/fristspring/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guc/fristspring/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guc/fristspring/bean/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guc/fristspring/bean/Hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resorces/SpringBeans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resorces/SpringBeans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SpringBeans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringBeans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/guc/fristspring/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/guc/fristspring/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/guc/fristspring/bean/Hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/guc/fristspring/bean/Hello.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,54 +28,46 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="iml" value="1" />
           <entry key="java" value="7" />
-          <entry key="md" value="1" />
-          <entry key="xml" value="1" />
+          <entry key="md" value="2" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="Git file" value="1" />
+          <entry key="Git file" value="2" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="7" />
-          <entry key="Markdown" value="1" />
-          <entry key="XML" value="1" />
+          <entry key="Markdown" value="2" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
           <entry key="gitignore" value="3" />
-          <entry key="java" value="349" />
-          <entry key="md" value="135" />
-          <entry key="xml" value="32" />
+          <entry key="java" value="374" />
+          <entry key="md" value="144" />
+          <entry key="txt" value="3" />
+          <entry key="xml" value="107" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="3" />
-          <entry key="JAVA" value="349" />
-          <entry key="Markdown" value="135" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="32" />
+          <entry key="JAVA" value="374" />
+          <entry key="Markdown" value="144" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="XML" value="107" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/guc/fristspring/bean/Hello.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -136,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/OutputHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="94">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="36" />
               <folding>
                 <element signature="e#230#231#0" expanded="true" />
                 <element signature="e#287#288#0" expanded="true" />
@@ -149,31 +134,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="152">
-                <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resorces/SpringBeans.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/guc/fristspring/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+            <state relative-caret-position="77">
+              <caret line="16" column="65" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,17 +145,32 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="38">
+                <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/guc/fristspring/bean/Person.java">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="e#150#151#0" expanded="true" />
-                <element signature="e#177#178#0" expanded="true" />
-                <element signature="e#217#218#0" expanded="true" />
-                <element signature="e#249#250#0" expanded="true" />
-              </folding>
+            <state>
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resorces/SpringBeans.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="16" column="93" lean-forward="true" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -201,9 +180,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -217,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/main/resorces/SpringBean.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/guc/fristspring/bean/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/resorces/SpringBeans.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/guc/fristspring/bean/Hello.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/IOutputGenerator.java" />
@@ -225,6 +203,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/JsonOutputGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/OutputHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/guc/fristspring/App.java" />
+        <option value="$PROJECT_DIR$/src/main/resorces/SpringBeans.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/README.md" />
       </list>
     </option>
   </component>
@@ -286,15 +266,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="fristspring" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="firstSpring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="firstSpring" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fristspring" type="462c0819:PsiDirectoryNode" />
               <item name="loosely_coupled" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -303,6 +274,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resorces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="firstSpring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="firstSpring" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -316,9 +292,14 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578292122584" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578292807747" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\firstSpring\src\main\java\com\guc\fristspring\loosely_coupled" />
+    </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -472,12 +453,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578280885885</updated>
-      <workItem from="1578280891642" duration="4937000" />
+      <workItem from="1578280891642" duration="5668000" />
     </task>
+    <task id="LOCAL-00001" summary="松耦合">
+      <created>1578292183760</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578292183761</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4937000" />
+    <option name="totallyTimeSpent" value="5668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -491,12 +480,12 @@
       <window_info id="Learn" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" weight="0.32879046" />
+      <window_info anchor="bottom" id="Spring" weight="0.32764506" />
       <window_info anchor="bottom" id="Terminal" weight="0.32935154" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" weight="0.32879046" />
+      <window_info anchor="bottom" id="Messages" weight="0.32764506" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32764506" />
@@ -521,16 +510,13 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="松耦合" />
+    <option name="LAST_COMMIT_MESSAGE" value="松耦合" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/firstSpring.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/guc/fristspring/bean/Person.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -542,13 +528,6 @@
             <element signature="e#217#218#0" expanded="true" />
             <element signature="e#249#250#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resorces/SpringBeans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -589,19 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/OutputHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/CsvOutputGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -631,13 +597,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resorces/SpringOutput.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/guc/fristspring/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+        <state relative-caret-position="77">
+          <caret line="16" column="65" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/OutputHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="36" />
+          <folding>
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resorces/SpringBeans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="16" column="93" lean-forward="true" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/guc/fristspring/loosely_coupled/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="38">
+            <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

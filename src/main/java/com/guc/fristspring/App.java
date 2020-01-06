@@ -21,8 +21,8 @@ public class App {
         person.setName("Mark");
         hello.setName(person.getName());
         hello.printHello();
-        OutputHelper helper = new OutputHelper();
-        helper.setOutputGenerator(new JsonOutputGenerator());
+
+        OutputHelper helper = (OutputHelper) context.getBean("OutputHelper");
         helper.generateOutput();
     }
 }

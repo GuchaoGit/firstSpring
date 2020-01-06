@@ -9,4 +9,10 @@
     <bean id="personBean" class="com.guc.fristspring.bean.Person">
         <property name="name" value="暂无"/>
     </bean>
+
+    <!--Spring Output 配置 -->
+    <bean id="OutputHelper" class="com.guc.fristspring.loosely_coupled.OutputHelper">
+        <property name="outputGenerator" ref="CsvOutputGenerator"/>
+    </bean>
+    <bean id="CsvOutputGenerator" class="com.guc.fristspring.loosely_coupled.CsvOutputGenerator"/>
 </beans>
