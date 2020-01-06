@@ -2,11 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <bean id="helloBean" class="com.guc.fristspring.bean.Hello">
-        <property name="name" value="谷超超"/>
+    <!--Spring Output 配置 -->
+    <bean id="OutputHelper" class="com.guc.fristspring.loosely_coupled.OutputHelper">
+        <property name="outputGenerator" ref="CsvOutputGenerator"/>
     </bean>
-    <bean id="personBean" class="com.guc.fristspring.bean.Person">
-        <property name="name" value="暂无"/>
-    </bean>
+    <bean id="CsvOutputGenerator" class="com.guc.fristspring.loosely_coupled.CsvOutputGenerator"/>
 </beans>
