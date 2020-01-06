@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+    <!--一般方法-->
     <bean id="helloBean" class="com.guc.fristspring.bean.Hello">
-        <property name="name" value="谷超超"/>
+        <property name="name">
+            <value>谷超</value>
+        </property>
     </bean>
-    <bean id="personBean" class="com.guc.fristspring.bean.Person">
-        <property name="name" value="暂无"/>
+    <!--在 Customer 的 Bean 中声明一个内部 Bean -->
+    <bean id="Customer" class="com.guc.fristspring.beanIoc.Customer">
+        <property name="person" >
+            <bean class="com.guc.fristspring.beanIoc.Person">
+                <property name="name" value="Gcc"/>
+                <property name="address" value="焦作"/>
+                <property name="age" value="29"/>
+            </bean>
+        </property>
     </bean>
+    <!-- 另一重配置方法 缩写方法-->
+    <bean id="personBean" class="com.guc.fristspring.beanIoc.Person">
+        <property name="name" value="Guc"/>
+        <property name="address" value="郑州"/>
+        <property name="age" value="28"/>
+    </bean>
+    <!--"p" schema 方法-->
+    <bean id="FileNameGenerator" class="com.guc.fristspring.beanIoc.FileNameGenerator" p:name="射雕英雄传" p:type="txt"/>
+
+    <!--大多数情况下，你可能只需要处理 Spring 的核心作用域 — 单例模式（ singleton ）和原型模式（ prototype ），默认情况下，作用域是单例模式-->
+    <bean id="CustomerServices" class="com.guc.fristspring.customer.services.CustomerServices" scope="prototype"/>
 </beans>

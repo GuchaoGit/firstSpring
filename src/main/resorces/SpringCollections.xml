@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="customerBean" class="com.guc.fristspring.collections.Customer">
+        <!-- java.util.List -->
+        <property name="lists">
+            <list>
+                <value>1</value><!-- List 属性既可以通过 <value> 注入字符串，也可以通过 <ref> 注入容器中其他的 Bean-->
+                <ref bean="personBean" />
+                <value>2</value>
+                <bean class="com.guc.fristspring.collections.Person">
+                    <property name="name" value="List" />
+                    <property name="address" value="北京" />
+                    <property name="age" value="25" />
+                </bean>
+            </list>
+        </property>
+
+        <!-- java.util.Set -->
+        <property name="sets">
+            <set>
+                <value>1</value><!--Set 与 List 类似-->
+                <ref bean="personBean" />
+                <bean class="com.guc.fristspring.collections.Person">
+                    <property name="name" value="Set" />
+                    <property name="address" value="上海" />
+                    <property name="age" value="26" />
+                </bean>
+            </set>
+        </property>
+
+        <!-- java.util.Map -->
+        <property name="maps">
+            <map>
+                <entry key="Key 1" value="1" /><!--一个 entry 就是一个 Map 元素-->
+                <entry key="Key 2" value-ref="personBean" />
+                <entry key="Key 3">
+                    <bean class="com.guc.fristspring.collections.Person">
+                        <property name="name" value="Map" />
+                        <property name="address" value="广州" />
+                        <property name="age" value="27" />
+                    </bean>
+                </entry>
+            </map>
+        </property>
+        <!-- java.util.Properties -->
+        <property name="pros"><!-- Properties 类型类似于Map 类型的特例，Map 元素的键值可以对应任何类型的对象，但是Properties只能是字符串-->
+            <props>
+                <prop key="admin">happygc@126.com</prop>
+                <prop key="support">happygc@126.com</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="personBean" class="com.guc.fristspring.collections.Person">
+        <property name="name" value="personBean" />
+        <property name="address" value="郑州" />
+        <property name="age" value="25" />
+    </bean>
+</beans>
