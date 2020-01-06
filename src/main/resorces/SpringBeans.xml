@@ -6,4 +6,7 @@
     <bean id="helloBean" class="com.guc.fristspring.bean.Hello">
         <property name="name" value="谷超超"/>
     </bean>
+    <bean id="personBean" class="com.guc.fristspring.bean.Person">
+        <property name="name" value="暂无"/>
+    </bean>
 </beans>

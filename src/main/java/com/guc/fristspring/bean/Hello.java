@@ -8,11 +8,11 @@ package com.guc.fristspring.bean;
 public class Hello {
     private String name;
 
-    public void setName(String n){
-        this.name=n;
+    public void setName(String n) {
+        this.name = n;
     }
 
-    public void printHello(){
-        System.out.println("The first Spring :hello"+name);
+    public void printHello() {
+        System.out.println("The first Spring :hello " + name);
     }
 }
