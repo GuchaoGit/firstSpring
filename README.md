@@ -48,4 +48,6 @@ Spring框架中，一旦把一个Bean纳入Spring IOC容器之中，这个Bean�
   * BeanPostProcessors的processAfterInitialization()，如果有关联的processor，则在Bean初始化之前都会执行这个实例的processAfterInitialization()方法
   * DisposableBean的destroy()，在容器关闭时，如果Bean类实现了该接口，则执行它的destroy()方法 -Bean定义文件中定义destroy-method，在容器关闭时，可以在Bean定义文件中使用“destory-method”定义的方法  
  ![image](https://github.com/GuchaoGit/firstSpring/blob/master/images/lifecycle.png)
+ ## Spring自动扫描与自动装配
+ 
 
