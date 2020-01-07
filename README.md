@@ -49,5 +49,48 @@ Spring框架中，一旦把一个Bean纳入Spring IOC容器之中，这个Bean�
   * DisposableBean的destroy()，在容器关闭时，如果Bean类实现了该接口，则执行它的destroy()方法 -Bean定义文件中定义destroy-method，在容器关闭时，可以在Bean定义文件中使用“destory-method”定义的方法  
  ![image](https://github.com/GuchaoGit/firstSpring/blob/master/images/lifecycle.png)
  ## Spring自动扫描与自动装配
- 
+  * @Component 表示这个 Class 是一个自动扫描组件
+  * @Autowired 自动装配
+  * 配置文件 SpringCustomer.xml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <context:component-scan base-package="com.guc.fristspring.autoscan"/>
+
+</beans>
+```
+ ###自动扫描组件的注释类型
+   * @Component ——表示一个自动扫描 component
+   * @Repository ——表示持久化层的 DAO component
+   * @Service ——表示业务逻辑层的 Service component
+   * @Controller ——表示表示层的 Controller component
+ ###自动扫描中过滤组件
+ * Filter Component - include
+ 这些组件只要匹配定义的“ regex ”的命名规则，Class 前就不需要用 @Component 进行注释  
+ ```
+ <context:include-filter type="regex" 
+                        expression="com.guc.fristspring.autoscan.services.*Service.*" />
+ ```
+ * Filter Component——exclude  
+ 也可以用 exclude ，制定组件避免被 Spring 发现并被注册到容器中
+ ```
+ <!-- 排除用 @Service 注释过的组件 -->
+ <context:exclude-filter type="annotation" 
+             expression="org.springframework.stereotype.Service" />     
+ ```
+ ###自动装配Bean
+自动装配，就是将一个 Bean 注入到其他 Bean 的 Property 中  
+五种装配模式：
+* no —— 默认情况下，不自动装配，通过 ref attribute 手动设定
+* byName —— 根据 Property 的 Name 自动装配
+* byType —— 根据 Property 的数据类型（ Type ）自动装配
+* constructor —— 根据构造函数参数的数据类型，进行 byType 模式的自动装配
+* autodetect —— 如果发现默认的构造函数，用 constructor 模式，否则，用 byType 模式

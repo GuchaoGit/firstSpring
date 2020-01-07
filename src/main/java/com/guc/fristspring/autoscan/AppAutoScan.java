@@ -13,7 +13,8 @@ public class AppAutoScan {
     public static void main(String[] args) {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("SpringCustomer.xml");
-        CustomerService cust = (CustomerService) context.getBean("CustomerService");
+        //Spring 将把组件 Class 的第一个字母变成小写，来作为自动扫描组件的名称
+        CustomerService cust = (CustomerService) context.getBean("customerService");
         System.out.println(cust);
     }
 }
