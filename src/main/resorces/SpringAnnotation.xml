@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <context:annotation-config/>
+
+    <bean id="personBean" class="com.guc.fristspring.annotation.entity.Person">
+        <property name="name" value="jack"/>
+        <property name="age" value="18"/>
+    </bean>
+
+    <bean id="dogBean" class="com.guc.fristspring.annotation.entity.Dog">
+        <property name="name" value="tom"/>
+        <property name="person" ref="personBean"/>
+    </bean>
+    <bean id="hello1" class="com.guc.fristspring.annotation.servcie.HelloImpl1"/>
+    <bean id="hello2" class="com.guc.fristspring.annotation.servcie.HelloImpl2"/>
+    <bean id="helloWorld" class="com.guc.fristspring.annotation.entity.HelloWorld">
+        <property name="message2" value="您好啊"></property>
+    </bean>
+    <bean id="msg" class="java.lang.String">
+        <constructor-arg index="0" value="你好"/>
+    </bean>
+</beans>
