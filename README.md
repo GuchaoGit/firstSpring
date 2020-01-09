@@ -99,11 +99,10 @@ Spring框架中，一旦把一个Bean纳入Spring IOC容器之中，这个Bean�
 * AOP(面向切面编程)  
 面向切面编程，是作为面向对象编程的一种补充，专门用于处理系统中分布于各个模块（不同方法）中的交叉关注点的问题。就是一个拦截器（ interceptor ）拦截一些处理过程。  
 支持4种类型的通知（Advice）
-  * Before advice - method 执行前通知  
-  
-  * After returning advice - method 返回一个结果后通知
-  * After throwing advice - method 抛出异常后通知
-  * Around advice - 环绕通知，结合了以上三种
+  * Before advice - method 执行前通知(MethodBeforeAdvice)  
+  * After returning advice - method 返回一个结果后通知(AfterReturningAdvice)
+  * After throwing advice - method 抛出异常后通知(ThrowsAdvice)
+  * Around advice - 环绕通知，结合了以上三种(MethodInterceptor)
 * AOP通知----Advice 表示一个 method 执行前或执行后的动作
 * Pointcut----表示根据 method 的名字或者正则表达式去拦截一个 method
   *Pointcut - Name match：
@@ -129,4 +128,13 @@ Spring框架中，一旦把一个Bean纳入Spring IOC容器之中，这个Bean�
   ```
 * Advisor----Advice 和 Pointcut 组成的独立的单元，并且能够传给 proxy factory 对象
 * 自动创建Proxy
-* AspectJ框架
+* AspectJ框架  
+基于注解（Annotation）实现的，支持的注解类型有：
+  * @Before
+  * @After
+  * @AfterReturning
+  * @AfterThrowing
+  * @Around  
+通过注解实现Advice 和 Pointcut
+
+
