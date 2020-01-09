@@ -86,7 +86,7 @@ Spring框架中，一旦把一个Bean纳入Spring IOC容器之中，这个Bean�
  <context:exclude-filter type="annotation" 
              expression="org.springframework.stereotype.Service" />     
  ```
- ###自动装配Bean
+ ###自动装配Bean  autowire
 自动装配，就是将一个 Bean 注入到其他 Bean 的 Property 中  
 五种装配模式：
 * no —— 默认情况下，不自动装配，通过 ref attribute 手动设定
@@ -94,3 +94,39 @@ Spring框架中，一旦把一个Bean纳入Spring IOC容器之中，这个Bean�
 * byType —— 根据 Property 的数据类型（ Type ）自动装配
 * constructor —— 根据构造函数参数的数据类型，进行 byType 模式的自动装配
 * autodetect —— 如果发现默认的构造函数，用 constructor 模式，否则，用 byType 模式
+
+## Spring AOP 面向切面编程 (Aspect-oriented programming)
+* AOP(面向切面编程)  
+面向切面编程，是作为面向对象编程的一种补充，专门用于处理系统中分布于各个模块（不同方法）中的交叉关注点的问题。就是一个拦截器（ interceptor ）拦截一些处理过程。  
+支持4种类型的通知（Advice）
+  * Before advice - method 执行前通知  
+  
+  * After returning advice - method 返回一个结果后通知
+  * After throwing advice - method 抛出异常后通知
+  * Around advice - 环绕通知，结合了以上三种
+* AOP通知----Advice 表示一个 method 执行前或执行后的动作
+* Pointcut----表示根据 method 的名字或者正则表达式去拦截一个 method
+  *Pointcut - Name match：
+  ```
+  <!--通过方法名设置拦截点-->
+  <bean id="customerPointcut"
+          class="org.springframework.aop.support.NameMatchMethodPointcut">
+          <property name="mappedName" value="printName" />
+  </bean>
+  ```
+  *Pointcut - Regular exxpression match:
+  ```
+    <!--通过正则设置拦截点-->
+    <bean id="customerAdvisor2" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="patterns">
+            <list>
+                <value>.*URL.*</value>
+            </list>
+        </property>
+        <property name="advice" ref="hiAfterMethod" />
+    </bean>
+    
+  ```
+* Advisor----Advice 和 Pointcut 组成的独立的单元，并且能够传给 proxy factory 对象
+* 自动创建Proxy
+* AspectJ框架

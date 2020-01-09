@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="customerService" class="com.guc.fristspring.aop.advice.CustomerService">
+        <property name="name" value="谷超" />
+        <property name="email" value="happygc@126.com" />
+    </bean>
+    <bean id="customer2Service" class="com.guc.fristspring.aop.advice.Customer2Service">
+        <property name="name" value="guc" />
+        <property name="email" value="happygc913@gmail.com" />
+    </bean>
+
+    <bean id="hiBeforeMethod" class="com.guc.fristspring.aop.advice.HiBeforeMethod"/>
+    <bean id="hiAfterMethod" class="com.guc.fristspring.aop.advice.HiAfterMethod"/>
+    <bean id="hiAfterThrowExceptionMethod" class="com.guc.fristspring.aop.advice.HiAfterThrowExceptionMethod"/>
+    <bean id="hiAroundMethod" class="com.guc.fristspring.aop.advice.HiAroundMethod"/>
+<!--
+      创建一个 NameMatchMethodPointcut 的 bean ，将你想拦截的方法的名字 printName 注入到属性 mappedName
+-->
+    <bean id="customerPointcut"
+          class="org.springframework.aop.support.NameMatchMethodPointcut">
+        <property name="mappedName" value="printName" />
+    </bean>
+    <!--将 pointcut 和 advice 关联起来-->
+    <bean id="customerAdvisor"
+          class="org.springframework.aop.support.DefaultPointcutAdvisor">
+        <property name="pointcut" ref="customerPointcut" />
+        <property name="advice" ref="hiBeforeMethod" />
+    </bean>
+
+    <!--通过正则设置拦截点-->
+    <bean id="customerAdvisor2" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="patterns">
+            <list>
+                <value>.*Email.*</value>
+            </list>
+        </property>
+        <property name="advice" ref="hiAfterMethod" />
+    </bean>
+
+    <!--手动创建代理-->
+    <bean id="customerServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="customerService" />
+        <property name="interceptorNames">
+            <list>
+                <!--所有方法均添加拦截-->
+                <!-- <value>hiAroundMethod</value>
+                 <value>hiBeforeMethod</value>
+                 <value>hiAfterMethod</value>
+                 <value>hiAfterThrowExceptionMethod</value>-->
+                <!--拦截的方法 printName-->
+                <value>customerAdvisor</value>
+                <value>customerAdvisor2</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--自动模式 自动创建Proxy  BeanNameAutoProxyCreator:bean 的 id 符合 *Service ，就会自动创建 proxy -->
+    <bean
+            class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+        <property name="beanNames">
+            <list>
+                <value>*Service</value>
+            </list>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>customerAdvisor2</value>
+            </list>
+        </property>
+    </bean>
+    <!--自动模式 自动创建Proxy  DefaultAdvisorAutoProxyCreator :任何匹配 Advisor 的 bean  ，就会自动创建 proxy-->
+   <!-- <bean
+            class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" />-->
+</beans>
