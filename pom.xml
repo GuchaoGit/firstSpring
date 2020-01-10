@@ -60,7 +60,17 @@
             <artifactId>cglib</artifactId>
             <version>3.2.9</version>
         </dependency>
-
+        <!--JDBC-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.46</version>
+        </dependency>
     </dependencies>
 
     <build>
