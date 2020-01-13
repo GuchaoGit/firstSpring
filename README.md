@@ -137,7 +137,38 @@ Spring框架中，一旦把一个Bean纳入Spring IOC容器之中，这个Bean�
   * @Around  
 通过注解实现Advice 和 Pointcut
 
-## Spring JDBC 框架
-* 
+## Spring JDBC Template
+Template 配置：
+```
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost/websites??autoReconnect=true&amp;useSSL=false"/>
+        <property name="username" value="root"/>
+        <property name="password" value="guc3306"/>
+    </bean>
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+```
+## Spring事务管理
+事务的4个特性：
+* 原子性（Atomicity）:确保动作要么全部完成，要么完全不起作用。
+* 一致性（Consistency）:一旦事务完成，必须保证建模业务处于一致的状态，不能是部分成功部分失败。
+* 隔离性（Isolation）:许多事务同时处理相同的数据，每个事务间应相互隔离，防止数据损坏。
+* 持久性（Durability）:一旦事务完成，无论发生什么系统错误，其结果都不应该受到影响。  
+两种事务管理方式：
+* 编程式事务管理 ：通过编码方式实现  
+主要通过org.springframework.transaction.support.TransactionTemplate 来实现事务管理
+```
+    <!-- 创建模板 -->
+    <bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">
+        <property name="transactionManager" ref="txManager"/>
+    </bean>
+    <!-- 配置事务管理器 ,管理器需要事务，事务从Connection获得，连接从连接池DataSource获得 -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+```
+* 声明式事务管理 ：管理建立在 AOP 之上的。其本质是对方法前后进行拦截，然后在目标方法开始之前创建或者加入一个事务，在执行完目标方法之后根据执行情况提交或者回滚事务。  
 
 
