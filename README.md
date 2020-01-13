@@ -170,5 +170,16 @@ Template 配置：
     </bean>
 ```
 * 声明式事务管理 ：管理建立在 AOP 之上的。其本质是对方法前后进行拦截，然后在目标方法开始之前创建或者加入一个事务，在执行完目标方法之后根据执行情况提交或者回滚事务。  
-
+```
+  <!-- 1 配置事务管理器 ,管理器需要事务，事务从Connection获得，连接从连接池DataSource获得 -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!-- 2 将管理器交予spring
+       * transaction-manager 配置事务管理器
+       * proxy-target-class
+           true ： 底层强制使用cglib 代理
+   -->
+    <tx:annotation-driven transaction-manager="txManager" proxy-target-class="true"/>
+```
 

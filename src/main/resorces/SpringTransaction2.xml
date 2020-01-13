@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       ">
+    <!--声明式事务管理-->
+
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost/websites??autoReconnect=true&amp;useSSL=false"/>
+        <property name="username" value="root"/>
+        <property name="password" value="guc3306"/>
+    </bean>
+
+    <bean id="websiteDao" class="com.guc.fristspring.tansaction.dao.WebsiteDaoImpl">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <bean id="websiteService" class="com.guc.fristspring.tansaction.service.WebsiteServiceImpl">
+        <property name="websiteDao" ref="websiteDao"/>
+    </bean>
+    <!-- 1 配置事务管理器 ,管理器需要事务，事务从Connection获得，连接从连接池DataSource获得 -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!-- 2 将管理器交予spring
+       * transaction-manager 配置事务管理器
+       * proxy-target-class
+           true ： 底层强制使用cglib 代理
+   -->
+    <tx:annotation-driven transaction-manager="txManager" proxy-target-class="true"/>
+</beans>
