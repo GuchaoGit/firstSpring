@@ -182,4 +182,10 @@ Template 配置：
    -->
     <tx:annotation-driven transaction-manager="txManager" proxy-target-class="true"/>
 ```
+## SpringMVC 简单了解
+* Spring Web 
+* Spring MVC 表单处理
+* Spring MVC 页面重定向
+* Spring MVC 异常处理  
+[SpringMVC](https://github.com/GuchaoGit/SpringMVC.git "MVC入门")
 

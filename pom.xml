@@ -9,8 +9,6 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>firstSpring</name>
-    <!-- FIXME change it to the project's website -->
-    <email>http://www.example.com</email>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
