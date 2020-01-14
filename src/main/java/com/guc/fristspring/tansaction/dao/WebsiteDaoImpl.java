@@ -1,5 +1,6 @@
 package com.guc.fristspring.tansaction.dao;
 
+import com.guc.fristspring.tansaction.entity.Log;
 import com.guc.fristspring.tansaction.entity.Website;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
@@ -21,5 +22,10 @@ public class WebsiteDaoImpl extends JdbcDaoSupport implements WebsiteDao {
     @Override
     public Website queryById(int id) {
         return this.getJdbcTemplate().queryForObject("select * from websites where id = ?",Website.class,id);
+    }
+
+    @Override
+    public List<Log> queryLogBySiteId(int sid) {
+        return this.getJdbcTemplate().query("select * from log where site_id = ?", new BeanPropertyRowMapper<Log>(Log.class),sid);
     }
 }

@@ -1,6 +1,7 @@
 package com.guc.fristspring.tansaction.dao;
 
 
+import com.guc.fristspring.tansaction.entity.Log;
 import com.guc.fristspring.tansaction.entity.Website;
 
 import java.util.List;
@@ -24,4 +25,6 @@ public interface WebsiteDao {
      * @return Website info
      */
     Website queryById(int id);
+
+    List<Log> queryLogBySiteId(int sid);
 }

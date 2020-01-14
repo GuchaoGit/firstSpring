@@ -26,10 +26,16 @@ public class WebsiteServiceImpl {
         this.websiteDao = websiteDao;
     }
     public List<Website> queryAll() {
-        return websiteDao.queryAll();
+        List<Website> websites = websiteDao.queryAll();
+        for (Website website:websites){
+            website.setLogs(websiteDao.queryLogBySiteId(website.getId()));
+        }
+        return websites;
     }
 
     public Website queryById(int id) {
-        return websiteDao.queryById(id);
+        Website website = websiteDao.queryById(id);
+        website.setLogs(websiteDao.queryLogBySiteId(website.getId()));
+        return website;
     }
 }
